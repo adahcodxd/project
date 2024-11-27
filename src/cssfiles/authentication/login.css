@@ -10,7 +10,22 @@
     padding: 0;
     animation: fadeIn 0.8s ease-in-out;
 }
-
+.info-box {
+    background-color: #ffeb3b; /* Bright Yellow */
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 16px;
+    color: #333; /* Dark text for readability */
+    border: 1px solid #fbc02d; /* Darker yellow border for contrast */
+    font-weight: bold;
+  }
+  
+  .info-box strong {
+    color: #d32f2f; /* Red color for the passwords to make them stand out */
+  }
+  
 /* Login Form Styles */
 .login-card {
     background: #333333;  /* Dark background for the form */

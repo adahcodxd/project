@@ -76,6 +76,11 @@ const Login = () => {
   return (
     <div className="login-container">
       <div className="login-card">
+        {/* Info Box */}
+        <div className="info-box">
+          <p> USerName anything Password for user is <strong>123</strong> and password for admin is <strong>111</strong></p>
+        </div>
+
         {/* Header */}
         <div className="login-header">
           <h2>Welcome Back!</h2>

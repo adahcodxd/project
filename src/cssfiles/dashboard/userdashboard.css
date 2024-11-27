@@ -429,14 +429,117 @@ ul {
   }
 }
 /* App Content Section */
+/* App Content Section */
 .app-content {
   background: linear-gradient(135deg, #1e2a3a, #141c2c); /* Dark gradient background */
   padding: 30px;
   border-radius: 12px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
-  color: #0f1215; /* Light text color for readability */
+  color: #e4e9f0; /* Light text color for readability */
   overflow: hidden;
   position: relative;
   z-index: 1;
 }
+
+.app-content::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 200%;
+  height: 200%;
+  background: rgba(78, 115, 223, 0.15); /* Soft blue overlay for intensity */
+  transform: translateX(-50%) rotate(45deg);
+  opacity: 0.3;
+  animation: shine 6s infinite linear;
+}
+
+@keyframes shine {
+  0% {
+    transform: translateX(-150%) rotate(45deg);
+  }
+  100% {
+    transform: translateX(150%) rotate(45deg);
+  }
+}
+
+.app-content h1, .app-content h2, .app-content h3 {
+  color: #fff;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.app-content p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #ccc; /* Lighter color for text */
+}
+
+.app-content .card {
+  background: #2c3e50;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.app-content .card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+}
+
+.app-content .card h2 {
+  font-size: 1.4rem;
+  color: #4e73df; /* Blue highlight for titles */
+}
+
+.app-content .card p {
+  color: #e4e9f0;
+  font-size: 1rem;
+}
+
+.app-content .card .card-icon {
+  font-size: 2rem;
+  color: #4e73df; /* Light blue for icons */
+  margin-bottom: 10px;
+}
+
+.app-content .card .card-action-btn {
+  background: #4e73df;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.app-content .card .card-action-btn:hover {
+  background: #2a55cc;
+}
+
+/* Darker background with subtle hover effects for links */
+.app-content a {
+  color: #4e73df;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.app-content a:hover {
+  color: #fff;
+}
+
+/* Responsive Adjustments for App Content */
+@media (max-width: 768px) {
+  .app-content {
+    padding: 20px;
+  }
+
+  .app-content .card {
+    padding: 15px;
+  }
+}
+
 
