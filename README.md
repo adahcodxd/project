@@ -179,8 +179,7 @@ The RBAC system enforces access control based on the roles and permissions assig
 ## Key Technologies
 
 - **Frontend**: React.js, Axios for API calls, React Router for routing.
-- **Backend**: Node.js, Express.js, MongoDB for data storage.
-- **Authentication**: JWT (JSON Web Tokens) for secure authentication and session management.
+
 
 ## Benefits of Using RBAC
 
