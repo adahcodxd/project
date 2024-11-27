@@ -435,7 +435,7 @@ ul {
   padding: 30px;
   border-radius: 12px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
-  color: #e4e9f0; /* Light text color for readability */
+  color: #112c64; /* Light text color for readability */
   overflow: hidden;
   position: relative;
   z-index: 1;
@@ -472,7 +472,7 @@ ul {
 .app-content p {
   font-size: 1rem;
   line-height: 1.6;
-  color: #ccc; /* Lighter color for text */
+  color: #14c228; /* Lighter color for text */
 }
 
 .app-content .card {

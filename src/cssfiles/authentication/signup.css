@@ -167,3 +167,6 @@
     font-size: 0.9rem;
   }
 }
+.app-content {
+  color: black; /* Set text color to black */
+}
