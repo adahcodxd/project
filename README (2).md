@@ -122,6 +122,42 @@ The system implements token-based authentication (using JWT) for secure access. 
 
 - Users must log in to access the system.
 - The authentication process uses **JWT** tokens to ensure secure login.
+## Screenshots
+
+### 1. Login Screen
+![Login Screen](./Screenshot%202024-11-27%20143027.png)
+
+### 2. User Dashboard
+![User Dashboard](./Screenshot%202024-11-27%20143047.png)
+
+### 3. Role Management
+![Role Management](./Screenshot%202024-11-27%20143115.png)
+
+### 4. Permission Settings
+![Permission Settings](./Screenshot%202024-11-27%20153241.png)
+
+### 5. Create New User
+![Create New User](./Screenshot%202024-11-27%20153254.png)
+
+### 6. Assign Role to User
+![Assign Role to User](./Screenshot%202024-11-27%20153308.png)
+
+### 7. Edit User Details
+![Edit User Details](./Screenshot%202024-11-27%20153321.png)
+
+### 8. Overview of User Roles
+![Overview of User Roles](./Screenshot%202024-11-27%20153333.png)
+
+### 9. Access Control Summary
+![Access Control Summary](./Screenshot%202024-11-27%20153420.png)
+
+### 10. System Settings
+![System Settings](./Screenshot%202024-11-27%20153429.png)
+
+### 11. Final Report
+![Final Report](./Screenshot%202024-11-27%20153441.png)
+
+
   
 ### 2. **Manage Users, Roles, and Permissions**
 
@@ -170,4 +206,4 @@ The RBAC system offers a robust and flexible solution to manage user access and 
 
 I hope this README provides a clear, comprehensive, and detailed explanation of the RBAC system you've developed. It covers the project, the features, how it works, and its key components in an easily understandable manner. You can copy and paste this directly into your GitHub repository!
 
-![React Logo](https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg)
+
