@@ -4,7 +4,7 @@ This is a complete **Role-Based Access Control (RBAC)** system built with a **Re
 
 ## Project Overview
 
-The RBAC system is designed to manage users and their access permissions based on roles. Roles can have different levels of access to resources, and users are assigned one or more roles to determine what actions they can perform. This system is essential for applications where different users need different levels of access to data or functionality.
+The RBAC system is designed to manage users and their access permissions based on roles. Roles can have different levels of access to resources, and users are assigned one or more roles to determine what actions they can perform. This system is essential for applications where different users need different levels of access to data or functionality.The RBAC system is designed to assign users specific roles, each with its own permissions for accessing resources or performing actions. The system enforces access control based on these roles and permissions, ensuring users can only interact with resources they are authorized to use
 
 The key components of the system include:
 
