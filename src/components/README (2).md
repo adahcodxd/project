@@ -1,11 +1,10 @@
-
 # Role-Based Access Control (RBAC) System
 
 This is a complete **Role-Based Access Control (RBAC)** system built with a **React** frontend  It allows for the management of users, roles, and permissions to ensure secure access control to various resources within an application.
 
 ## Project Overview
 
-The RBAC system is designed to manage users and their access permissions based on roles. Roles can have different levels of access to resources, and users are assigned one or more roles to determine what actions they can perform. This system is essential for applications where different users need different levels of access to data or functionality.The RBAC system is designed to assign users specific roles, each with its own permissions for accessing resources or performing actions. The system enforces access control based on these roles and permissions, ensuring users can only interact with resources they are authorized to use
+The RBAC system is designed to manage users and their access permissions based on roles. Roles can have different levels of access to resources, and users are assigned one or more roles to determine what actions they can perform. This system is essential for applications where different users need different levels of access to data or functionality.
 
 The key components of the system include:
 
@@ -123,42 +122,6 @@ The system implements token-based authentication (using JWT) for secure access. 
 
 - Users must log in to access the system.
 - The authentication process uses **JWT** tokens to ensure secure login.
-## Screenshots
-
-### 1. Login Screen
-![Login Screen](./Screenshot%202024-11-27%20143027.png)
-
-### 2. User Dashboard
-![User Dashboard](./Screenshot%202024-11-27%20143047.png)
-
-### 3. Role Management
-![Role Management](./Screenshot%202024-11-27%20143115.png)
-
-### 4. Permission Settings
-![Permission Settings](./Screenshot%202024-11-27%20153241.png)
-
-### 5. Create New User
-![Create New User](./Screenshot%202024-11-27%20153254.png)
-
-### 6. Assign Role to User
-![Assign Role to User](./Screenshot%202024-11-27%20153308.png)
-
-### 7. Edit User Details
-![Edit User Details](./Screenshot%202024-11-27%20153321.png)
-
-### 8. Overview of User Roles
-![Overview of User Roles](./Screenshot%202024-11-27%20153333.png)
-
-### 9. Access Control Summary
-![Access Control Summary](./Screenshot%202024-11-27%20153420.png)
-
-### 10. System Settings
-![System Settings](./Screenshot%202024-11-27%20153429.png)
-
-### 11. Final Report
-![Final Report](./Screenshot%202024-11-27%20153441.png)
-
-
   
 ### 2. **Manage Users, Roles, and Permissions**
 
@@ -179,7 +142,8 @@ The RBAC system enforces access control based on the roles and permissions assig
 ## Key Technologies
 
 - **Frontend**: React.js, Axios for API calls, React Router for routing.
-
+- **Backend**: Node.js, Express.js, MongoDB for data storage.
+- **Authentication**: JWT (JSON Web Tokens) for secure authentication and session management.
 
 ## Benefits of Using RBAC
 
@@ -205,3 +169,4 @@ The RBAC system offers a robust and flexible solution to manage user access and 
 ---
 
 I hope this README provides a clear, comprehensive, and detailed explanation of the RBAC system you've developed. It covers the project, the features, how it works, and its key components in an easily understandable manner. You can copy and paste this directly into your GitHub repository!
+
