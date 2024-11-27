@@ -1,0 +1,153 @@
+/* General Styles */
+.permissions-page {
+  background: linear-gradient(to bottom, #2c2c2c, #1a1a1a); /* Darker background */
+  padding: 40px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  max-width: 900px;
+  margin: 40px auto;
+  border-radius: 20px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.25);
+  color: #f1f1f1; /* Light text color for readability */
+}
+
+/* Header Styling */
+.permissions-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.permissions-header h1 {
+  font-size: 38px;
+  color: #ffffff; /* Brighter title */
+  font-weight: bold;
+}
+
+.permissions-header p {
+  font-size: 18px;
+  color: #d1d1d1; /* Lighter gray for description text */
+  line-height: 1.6;
+}
+
+/* Permissions Table */
+.permissions-table table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 30px;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #333; /* Dark table background */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.permissions-table th,
+.permissions-table td {
+  padding: 15px;
+  text-align: left;
+  font-size: 16px;
+  color: #f1f1f1; /* Brighter text for table data */
+}
+
+.permissions-table th {
+  background: linear-gradient(to right, #1a73e8, #125cbf); /* Darker blue for header */
+  color: #fff;
+  border-bottom: 2px solid #555;
+  font-weight: bold;
+}
+
+.permissions-table tr:nth-child(even) {
+  background-color: #444; /* Darker row colors */
+}
+
+.permissions-table tr:hover {
+  background-color: #555; /* Slightly lighter on hover */
+}
+
+.permissions-table td {
+  border-bottom: 1px solid #555;
+}
+
+/* Buttons in Table */
+.permissions-table .toggle-btn {
+  padding: 10px 20px;
+  border: none;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.permissions-table .toggle-btn.granted {
+  background: linear-gradient(to right, #4caf50, #3e8f41); /* Green for granted */
+  color: white;
+}
+
+.permissions-table .toggle-btn.denied {
+  background: linear-gradient(to right, #f44336, #d73830); /* Red for denied */
+  color: white;
+}
+
+.permissions-table .toggle-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+/* Actions */
+.permissions-actions {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.save-btn {
+  background: linear-gradient(to right, #1a73e8, #125cbf); /* Darker blue button */
+  color: white;
+  padding: 16px 40px;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.save-btn:hover {
+  transform: scale(1.05);
+  background: linear-gradient(to right, #1665b2, #0f4b89); /* Slightly darker hover effect */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.save-btn:active {
+  transform: scale(0.95);
+}
+
+.save-btn:disabled {
+  background-color: #777;
+  cursor: not-allowed;
+  color: #ccc;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .permissions-page {
+      padding: 20px;
+  }
+
+  .permissions-header h1 {
+      font-size: 32px;
+  }
+
+  .permissions-header p {
+      font-size: 16px;
+  }
+
+  .permissions-table th,
+  .permissions-table td {
+      font-size: 14px;
+      padding: 10px;
+  }
+
+  .save-btn {
+      padding: 14px 30px;
+      font-size: 16px;
+  }
+}

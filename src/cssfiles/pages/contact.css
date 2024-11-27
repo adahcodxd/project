@@ -1,0 +1,248 @@
+/* Main container styles */
+.contact-page {
+    padding: 80px 30px; /* Increased padding for more space */
+    font-family: "Arial", sans-serif;
+    line-height: 1.8;
+    background: linear-gradient(135deg, #0d2b4c, #1a3d66); /* Darker gradient */
+    color: #ffffff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-attachment: fixed;
+  }
+  
+  /* Header Section */
+  .contact-header {
+    text-align: center;
+    margin-bottom: 50px;
+    z-index: 1;
+  }
+  
+  .contact-header h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #f39c12; /* Brighter gold color */
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .contact-header p {
+    font-size: 1.4rem;
+    color: #ecf0f1; /* Light gray for better contrast */
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  /* Main container for Contact Information */
+  .contact-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px; /* Increased gap for better spacing */
+    margin-top: 60px;
+    margin-bottom: 60px; /* Added bottom margin for better spacing */
+  }
+  
+  /* Contact Info Card Style */
+  .contact-info .contact-card {
+    background: linear-gradient(145deg, #34495e, #2c3e50); /* Darker card background */
+    color: #ffffff;
+    width: 280px;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    text-align: center;
+    position: relative;
+  }
+  
+  /* Hover effect on Contact Cards */
+  .contact-info .contact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    background: linear-gradient(145deg, #2c3e50, #1a2a3a); /* Darker hover effect */
+  }
+  
+  /* Icons inside Contact Card */
+  .contact-info .contact-card i {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: #f39c12; /* Gold color for icons */
+    transition: color 0.3s ease;
+  }
+  
+  /* Hover Effect on Icons */
+  .contact-info .contact-card:hover i {
+    color: #f5b342; /* Slightly lighter gold on hover */
+  }
+  
+  /* Contact Card Title */
+  .contact-info .contact-card h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: #ecf0f1; /* Light gray */
+  }
+  
+  /* Contact Card Details */
+  .contact-info .contact-card p {
+    font-size: 1.1rem;
+    color: #dcdde1; /* Lighter gray for better readability */
+    line-height: 1.5;
+  }
+  
+  /* Contact Information Title */
+  .contact-info-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 40px;
+    font-weight: bold;
+    color: #f39c12; /* Bright gold */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Form Section */
+  .contact-form {
+    max-width: 700px; /* Increased max-width for more space */
+    width: 100%;
+    margin: 0 auto;
+    background: #2c3e50; /* Darker form background */
+    padding: 40px 50px; /* Increased padding for better spacing */
+    border-radius: 12px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3); /* Stronger shadow for dark theme */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    backdrop-filter: blur(15px); /* More intense blur effect */
+    background-color: rgba(44, 62, 80, 0.9); /* Stronger dark transparent background */
+  }
+  
+  .contact-form:hover {
+    transform: scale(1.03);
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.3); /* Enhanced shadow effect */
+  }
+  
+  .contact-form label {
+    display: block;
+    margin-bottom: 12px; /* Increased margin for better spacing */
+    font-size: 1.1rem;
+    color: #ecf0f1; /* Light gray for labels */
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    padding: 16px;
+    margin-bottom: 25px; /* Increased margin for better spacing */
+    border: 2px solid #7f8c8d; /* Darker border for inputs */
+    border-radius: 10px;
+    font-size: 1rem;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2); /* Darker inner shadow */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .contact-form input:focus,
+  .contact-form textarea:focus {
+    border-color: #00d1b2;
+    box-shadow: 0 0 8px rgba(0, 209, 178, 0.8);
+    outline: none;
+  }
+  
+  .contact-form textarea {
+    resize: none;
+    height: 150px; /* Increased height for better readability */
+  }
+  
+  .contact-form button {
+    width: 100%;
+    padding: 18px; /* Increased padding for better touch */
+    background: linear-gradient(45deg, #16a085, #1abc9c); /* Greenish gradient */
+    color: #ffffff;
+    font-size: 1.5rem; /* Increased font size */
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .contact-form button:hover {
+    background: linear-gradient(45deg, #1abc9c, #16a085);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Enhanced hover shadow */
+  }
+  
+  .contact-form button:active {
+    transform: translateY(1px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+  }
+  
+  /* Success Message */
+  .contact-page .success-message {
+    text-align: center;
+    font-size: 1.4rem;
+    color: #d4edda;
+    margin-top: 20px;
+    background: #28a745;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Background Patterns and Effects */
+  .contact-page::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("https://www.transparenttextures.com/patterns/diag-stripes.png") repeat;
+    opacity: 0.1;
+    pointer-events: none;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .contact-header h1 {
+      font-size: 2.8rem;
+    }
+  
+    .contact-header p {
+      font-size: 1.3rem;
+    }
+  
+    .contact-form {
+      padding: 30px 40px;
+    }
+  
+    .contact-form input,
+    .contact-form textarea {
+      font-size: 1.1rem;
+    }
+  
+    .contact-form button {
+      font-size: 1.3rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .contact-header h1 {
+      font-size: 2.5rem;
+    }
+  
+    .contact-header p {
+      font-size: 1.2rem;
+    }
+  
+    .contact-form button {
+      padding: 16px;
+      font-size: 1.2rem;
+    }
+  }
+  

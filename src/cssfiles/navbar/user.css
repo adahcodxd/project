@@ -1,0 +1,141 @@
+.user-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background: linear-gradient(90deg, #030c05, #06280e);
+  color: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  border-bottom: 4px solid #040f07;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: background 0.4s ease, box-shadow 0.4s ease;
+}
+
+.user-navbar:hover {
+  background: linear-gradient(90deg, #131f50, #03210a);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.navbar-brand h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  margin: 0;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: color 0.4s ease, transform 0.3s ease;
+}
+
+.navbar-brand h1:hover {
+  color: #dff6e3;
+  transform: scale(1.1);
+}
+
+/* Navbar Links */
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  margin: 0;
+}
+
+.navbar-links li {
+  margin: 0;
+  position: relative;
+}
+
+.navbar-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 10px 20px;
+  border-radius: 50px;
+  background: rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease-in-out, transform 0.3s ease;
+  position: relative; /* Required for hover underline effect */
+}
+
+.navbar-links a:hover,
+.navbar-links a:focus {
+  background: rgba(255, 255, 255, 0.3);
+  color: #dff6e3;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Add Active State */
+.navbar-links a.active {
+  background-color: #1f124a;
+  color: #d4edda;
+  font-weight: bold;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transform: scale(1.05);
+}
+
+/* Underline Hover Effect */
+.navbar-links a::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 3px;
+  background: #dff6e3;
+  transition: width 0.3s ease;
+  margin: 0 auto;
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  right: 0;
+}
+
+.navbar-links a:hover::after {
+  width: 80%; /* Underline grows */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .user-navbar {
+    flex-direction: column;
+    padding: 15px 20px;
+  }
+
+  .navbar-links {
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .navbar-links li a {
+    width: 100%;
+  }
+}
+
+/* Entrance Animation for Navbar */
+.user-navbar {
+  animation: slideDown 0.5s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Hover Animation for Navbar Links */
+.navbar-links a:hover {
+  transform: translateY(-3px) scale(1.1); /* Lift effect */
+}
+
+.navbar-links a:focus {
+  outline: none;
+  transform: translateY(-3px) scale(1.1);
+}

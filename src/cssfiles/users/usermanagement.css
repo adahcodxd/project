@@ -1,0 +1,309 @@
+General Styles
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  background-color: #f5f5f5;
+  font-size: 16px;
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+
+/* Dark Mode */
+.dark-mode {
+  background-color: #121212;
+  color: white;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Container */
+.usermanagement-container {
+  width: 100%;
+  min-height: 100vh;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  background-color: #fafafa;
+  overflow: auto;
+}
+
+.usermanagement-container.dark-mode {
+  background-color: #1e1e1e;
+}
+
+/* Header */
+.usermanagement-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.usermanagement-header h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.dark-mode .usermanagement-header h2 {
+  color: white;
+}
+
+.usermanagement-header button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 5px;
+}
+
+/* Search Bar and Filters */
+.controls-container {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.controls-container .role-filter {
+  width: 200px;
+}
+
+.search-container input {
+  border: 2px solid #1976d2;
+  padding: 8px 12px;
+  border-radius: 5px;
+}
+
+.dark-mode .search-container input {
+  background-color: #222;
+  color: white;
+}
+
+/* Table */
+.usermanagement-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.usermanagement-table th,
+.usermanagement-table td {
+  padding: 12px 15px;
+  text-align: left;
+  font-size: 0.9rem;
+}
+
+.usermanagement-table th {
+  background-color: #1976d2;
+  color: white;
+  font-weight: bold;
+}
+
+.usermanagement-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.usermanagement-table tr:hover {
+  background-color: #ddd;
+  transition: background-color 0.2s;
+}
+
+.usermanagement-table td {
+  border-bottom: 1px solid #ddd;
+}
+
+.dark-mode .usermanagement-table {
+  background-color: #333;
+}
+
+.dark-mode .usermanagement-table th {
+  background-color: #1976d2;
+}
+
+.dark-mode .usermanagement-table td {
+  border-bottom: 1px solid #555;
+}
+
+.dark-mode .usermanagement-table tr:nth-child(even) {
+  background-color: #444;
+}
+
+.dark-mode .usermanagement-table tr:hover {
+  background-color: #555;
+}
+
+/* Buttons */
+button {
+  font-size: 14px;
+  padding: 8px 16px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+button:hover:not(:disabled) {
+  opacity: 0.9;
+}
+
+/* Modal */
+.usermanagement-modal {
+  background-color: white;
+  width: 500px;
+  max-width: 90%;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.dark-mode .usermanagement-modal {
+  background-color: #2e2e2e;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.modal-header h3 {
+  font-size: 1.5rem;
+  color: #1976d2;
+}
+
+.dark-mode .modal-header h3 {
+  color: white;
+}
+
+.modal-close-icon {
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: #1976d2;
+  transition: color 0.3s;
+}
+
+.modal-close-icon:hover {
+  color: #0056a4;
+}
+
+.modal-submit-btn {
+  margin-top: 20px;
+  background-color: #1976d2;
+  color: white;
+  font-size: 1rem;
+  border-radius: 5px;
+}
+
+.modal-submit-btn:hover {
+  background-color: #0056a4;
+}
+
+.dark-mode .modal-submit-btn {
+  background-color: #0056a4;
+}
+
+/* Pagination */
+.MuiTablePagination-root {
+  font-size: 0.9rem;
+  padding: 10px;
+}
+
+.MuiTablePagination-caption {
+  font-weight: 600;
+}
+
+.MuiTablePagination-toolbar {
+  justify-content: center;
+}
+
+.MuiTablePagination-actions button {
+  color: #1976d2;
+}
+
+.dark-mode .MuiTablePagination-actions button {
+  color: white;
+}
+
+/* Snackbar */
+.snackbar {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #323232;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Dark Mode Snackbar */
+.dark-mode .snackbar {
+  background-color: #444;
+}
+
+/* Hover Animations */
+button:hover,
+.modal-submit-btn:hover {
+  transform: scale(1.02);
+}
+
+.usermanagement-table tr:hover {
+  transform: scale(1.01);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .usermanagement-container {
+    padding: 20px;
+  }
+
+  .usermanagement-header {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .usermanagement-header h2 {
+    font-size: 1.5rem;
+  }
+
+  .controls-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .usermanagement-table th,
+  .usermanagement-table td {
+    padding: 10px 12px;
+  }
+
+  .usermanagement-modal {
+    width: 90%;
+    padding: 15px;
+    border-radius: 5px;
+  }
+}
+
+/* Accessibility */
+button:focus,
+.modal-submit-btn:focus {
+  outline: 2px solid #1976d2;
+  outline-offset: 2px;
+}
+

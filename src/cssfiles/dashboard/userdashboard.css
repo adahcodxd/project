@@ -1,0 +1,442 @@
+/* General Reset and Typography */
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+} */
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(135deg, #eef2f9, #f9fafc);
+  color: #2c3e50;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4 {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+/* Dashboard Grid Layout */
+.dashboard-container {
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "stats notifications"
+    "progress deadlines"
+    "activities team"
+    "tips actions";
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+/* Header Section */
+.dashboard-header {
+  grid-area: header;
+  background: linear-gradient(135deg, #4e73df, #224abe);
+  color: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.dashboard-header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 200%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateX(-50%) rotate(-15deg);
+  opacity: 0.3;
+  animation: shine 5s infinite;
+}
+
+@keyframes shine {
+  0% {
+    transform: translateX(-150%) rotate(-15deg);
+  }
+  100% {
+    transform: translateX(150%) rotate(-15deg);
+  }
+}
+
+.dashboard-header h1 {
+  font-size: 2.8rem;
+  letter-spacing: 1px;
+}
+
+.dashboard-header p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+/* Stats Section */
+.dashboard-stats {
+  grid-area: stats;
+  display: flex;
+  gap: 20px;
+}
+
+.stat-card {
+  flex: 1;
+  padding: 20px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.stat-card::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(78, 115, 223, 0.15), transparent);
+  transform: rotate(45deg);
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.stat-card h2 {
+  font-size: 1.5rem;
+  color: #4e73df;
+}
+
+.stat-card p {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+.stat-icon {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  color: #4e73df;
+}
+
+/* Notifications Section */
+.dashboard-notifications {
+  grid-area: notifications;
+  padding: 20px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.dashboard-notifications h2 {
+  font-size: 1.5rem;
+  color: #4e73df;
+  margin-bottom: 15px;
+}
+
+.notification-item {
+  padding: 10px;
+  margin-bottom: 10px;
+  background: linear-gradient(90deg, #f4f7ff, #eef2f9);
+  border-left: 4px solid #4e73df;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+}
+
+.notification-item:last-child {
+  margin-bottom: 0;
+}
+
+.notification-icon {
+  font-size: 1.5rem;
+  color: #4e73df;
+  margin-right: 10px;
+}
+
+.notification-text {
+  font-size: 1rem;
+}
+
+/* Progress Tracker Section */
+.dashboard-progress {
+  grid-area: progress;
+  padding: 20px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.dashboard-progress h2 {
+  font-size: 1.5rem;
+  color: #4e73df;
+  margin-bottom: 15px;
+}
+
+.dashboard-progress ul {
+  padding: 0;
+}
+
+.dashboard-progress li {
+  margin-bottom: 15px;
+}
+
+.progress-bar {
+  position: relative;
+  height: 10px;
+  background: #e4e8f6;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-top: 8px;
+}
+
+.progress-fill {
+  height: 100%;
+  background: #4e73df;
+  border-radius: 5px;
+}
+
+/* Deadlines Section */
+.dashboard-deadlines {
+  grid-area: deadlines;
+  padding: 20px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.dashboard-deadlines h2 {
+  font-size: 1.5rem;
+  color: #4e73df;
+  margin-bottom: 15px;
+}
+
+.dashboard-deadlines ul {
+  padding: 0;
+}
+
+.dashboard-deadlines li {
+  margin-bottom: 10px;
+  background: #f4f7ff;
+  border-left: 4px solid #4e73df;
+  border-radius: 8px;
+  padding: 10px 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.dashboard-deadlines li:last-child {
+  margin-bottom: 0;
+}
+
+.dashboard-deadlines li strong {
+  color: #2c3e50;
+}
+
+.dashboard-deadlines li span {
+  color: #555;
+  font-size: 0.9rem;
+}
+
+/* Team Collaboration Section */
+.dashboard-team {
+  grid-area: team;
+  padding: 20px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.dashboard-team h2 {
+  font-size: 1.5rem;
+  color: #4e73df;
+  margin-bottom: 15px;
+}
+
+.dashboard-team ul {
+  padding: 0;
+}
+
+.dashboard-team li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background: #f4f7ff;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.dashboard-team li:last-child {
+  margin-bottom: 0;
+}
+
+.dashboard-team li strong {
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+.dashboard-team li span {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Tips/Insights Section */
+.dashboard-tips {
+  grid-area: tips;
+  padding: 20px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  text-align: center;
+}
+
+.dashboard-tips h2 {
+  font-size: 1.5rem;
+  color: #4e73df;
+  margin-bottom: 15px;
+}
+
+.dashboard-tips p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .dashboard-container {
+    grid-template-areas:
+      "header"
+      "stats"
+      "notifications"
+      "progress"
+      "deadlines"
+      "activities"
+      "team"
+      "tips"
+      "actions";
+    grid-template-columns: 1fr;
+  }
+
+  .stat-card {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+  }
+
+  .action-buttons {
+    flex-direction: row;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+}
+/* Recent Activities Section */
+.dashboard-activities {
+  grid-area: activities;
+  padding: 20px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.dashboard-activities h2 {
+  font-size: 1.6rem;
+  color: #4e73df;
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.activity-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.activity-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background: linear-gradient(90deg, #f8f9fc, #eef2f9);
+  border-left: 4px solid #4e73df;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.activity-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.activity-description {
+  font-size: 1rem;
+  color: #2c3e50;
+  font-weight: 500;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.activity-time {
+  font-size: 0.9rem;
+  color: #6c757d;
+  text-align: right;
+}
+
+.activity-icon {
+  font-size: 1.4rem;
+  color: #4e73df;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .dashboard-activities {
+    padding: 15px;
+  }
+
+  .activity-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .activity-time {
+    text-align: left;
+    font-size: 0.85rem;
+  }
+}
+/* App Content Section */
+.app-content {
+  background: linear-gradient(135deg, #1e2a3a, #141c2c); /* Dark gradient background */
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+  color: #0f1215; /* Light text color for readability */
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+

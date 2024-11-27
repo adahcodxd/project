@@ -1,0 +1,200 @@
+/* Global Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background: #f5f7fa;
+  color: #333;
+}
+
+h1, h3 {
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+}
+
+/* Page Container */
+.system-notifications-page {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 30px;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Title */
+.system-notifications-page h1 {
+  font-size: 32px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Filter Section */
+.filter-options {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.filter-options label {
+  font-size: 16px;
+  font-weight: bold;
+  color: #444;
+}
+
+.filter-options select {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  background-color: #f7f7f7;
+  transition: border-color 0.3s ease;
+}
+
+.filter-options select:focus {
+  outline: none;
+  border-color: #6b73ff;
+}
+
+/* Notification List */
+.notification-list {
+  margin-bottom: 30px;
+}
+
+.notification-item {
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.notification-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.notification-item.info {
+  background-color: #e0f7fa;
+  border-left: 4px solid #00bcd4;
+}
+
+.notification-item.warning {
+  background-color: #fff3e0;
+  border-left: 4px solid #ff9800;
+}
+
+.notification-item.critical {
+  background-color: #ffebee;
+  border-left: 4px solid #f44336;
+}
+
+.notification-item .message {
+  font-size: 16px;
+  color: #555;
+}
+
+.notification-item .date {
+  font-size: 14px;
+  color: #777;
+  margin-top: 8px;
+  display: block;
+}
+
+/* Create Notification Section */
+.create-notification {
+  margin-top: 40px;
+  padding: 30px;
+  background: #fafafa;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.create-notification h3 {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.create-notification textarea {
+  width: 100%;
+  height: 120px;
+  padding: 15px;
+  font-size: 16px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  background-color: #f7f7f7;
+  resize: none;
+  transition: border-color 0.3s ease;
+}
+
+.create-notification textarea:focus {
+  outline: none;
+  border-color: #6b73ff;
+}
+
+.create-notification select,
+.create-notification input[type="datetime-local"] {
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  background-color: #f7f7f7;
+  margin-top: 15px;
+  width: 100%;
+  transition: border-color 0.3s ease;
+}
+
+.create-notification select:focus,
+.create-notification input[type="datetime-local"]:focus {
+  outline: none;
+  border-color: #6b73ff;
+}
+
+.create-notification button {
+  background: linear-gradient(to right, #6b73ff, #9a8cfd);
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.create-notification button:hover {
+  transform: scale(1.05);
+  background: linear-gradient(to right, #5a64e2, #8678ff);
+}
+
+.create-notification button:active {
+  transform: scale(0.98);
+  background: linear-gradient(to right, #4e57cc, #746bf4);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .system-notifications-page {
+    padding: 20px;
+  }
+
+  .filter-options {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .create-notification textarea {
+    height: 100px;
+  }
+
+  .create-notification select,
+  .create-notification input[type="datetime-local"] {
+    width: 100%;
+  }
+}

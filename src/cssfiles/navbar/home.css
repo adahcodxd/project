@@ -1,0 +1,149 @@
+/* General Navbar Styling */
+.homenavbar {
+    background-color: #f8f9fa; /* Light gray background */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 2px solid #007bff; /* Accent border at the bottom */
+  }
+  
+  .homenavbar-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  /* Logo Styling */
+  .logo a {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #007bff; /* Primary color for branding */
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .logo a:hover {
+    color: #0056b3; /* Slightly darker hover effect */
+  }
+  
+  /* Navigation Links */
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+  }
+  
+  .nav-links li {
+    font-size: 1rem;
+    font-weight: 500;
+  }
+  
+  .nav-links li a {
+    text-decoration: none;
+    color: #555; /* Neutral text color */
+    transition: color 0.3s ease, font-weight 0.3s ease;
+  }
+  
+  .nav-links li a:hover,
+  .nav-links li.active a {
+    color: #007bff;
+    font-weight: bold;
+    border-bottom: 2px solid #007bff; /* Active/hover underline */
+  }
+  
+  /* Auth Buttons (Login and Signup) */
+  .auth-links {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .auth-btn {
+    text-decoration: none;
+    padding: 8px 20px;
+    border: 2px solid #007bff; /* Consistent accent color */
+    border-radius: 25px; /* Smooth rounded edges */
+    color: #007bff;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+  }
+  
+  .auth-btn:hover {
+    background-color: #007bff;
+    color: #fff; /* White text for contrast */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .homenavbar-container {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 10px;
+    }
+  
+    .nav-links {
+      flex-direction: column;
+      gap: 15px;
+      align-items: center;
+      margin-top: 10px;
+    }
+  
+    .auth-links {
+      flex-direction: column;
+      gap: 10px;
+      align-items: center;
+    }
+  }
+  
+  /* Enhanced Aesthetic Features */
+  .homenavbar {
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .homenavbar:hover {
+    background-color: #e9ecef; /* Subtle background change on hover */
+  }
+  
+  .nav-links li a {
+    position: relative;
+  }
+  
+  .nav-links li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -2px;
+    left: 50%;
+    background-color: #007bff;
+    transition: width 0.3s ease, left 0.3s ease;
+  }
+  
+  .nav-links li a:hover::after,
+  .nav-links li.active a::after {
+    width: 100%;
+    left: 0;
+  }
+  
+  /* Mobile Menu Animation (Optional) */
+  .homenavbar-container.mobile-menu {
+    animation: slideDown 0.5s ease-out;
+  }
+  
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  

@@ -1,0 +1,258 @@
+/* General Page Layout */
+.admin-profile-page {
+    background-color: #f3f5f9;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: background-color 0.3s ease;
+    background-image: linear-gradient(135deg, #e8eff7, #ffffff);
+}
+
+/* Dark Mode for Background */
+.admin-profile-page.dark {
+    background-color: #121212;
+    background-image: linear-gradient(135deg, #1c1c1c, #121212);
+}
+
+/* Profile Container */
+.admin-profile-container {
+    background: linear-gradient(145deg, #2b2b2b, #1f1f1f); /* Darker gradient for intense effect */
+    border-radius: 16px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3); /* Stronger shadow for depth */
+    padding: 40px;
+    width: 100%;
+    max-width: 750px;
+    transition: all 0.4s ease;
+    text-align: center;
+    border: 1px solid #444;
+    background-clip: padding-box; /* Smooth gradient with border */
+}
+
+/* Add Glow Effect */
+.admin-profile-container:hover {
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3), 0 0 15px rgba(75, 155, 224, 0.5);
+    transform: scale(1.03);
+    transition: all 0.4s ease;
+}
+
+/* Heading */
+.admin-profile-container h1 {
+    font-size: 38px;
+    font-weight: 800;
+    color: #f4f4f4; /* Lighter text for dark theme */
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.6);
+}
+
+.admin-profile-container h1:hover {
+    color: #4b9be0;
+    text-shadow: 2px 2px 12px rgba(75, 155, 224, 0.8);
+}
+
+.admin-profile-container p {
+    font-size: 18px;
+    color: #bbb; /* Softer color for text */
+    margin-bottom: 20px;
+    transition: color 0.3s ease;
+    line-height: 1.6;
+}
+
+.admin-profile-container p:hover {
+    color: #4b9be0;
+    text-decoration: underline dotted;
+}
+
+/* Profile Form */
+.profile-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Profile Fields */
+.profile-field {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: relative;
+}
+
+/* Labels for Fields */
+.profile-field label {
+    font-size: 14px;
+    color: #ccc; /* Light color for labels */
+    margin-bottom: 5px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    opacity: 0.8;
+}
+
+/* Input and Select Fields */
+.profile-field input,
+.profile-field select {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #555;
+    border-radius: 8px;
+    background-color: #333;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    color: #eee; /* Lighter text for inputs */
+}
+
+/* Add subtle glow on focus */
+.profile-field input:focus,
+.profile-field select:focus {
+    border-color: #4b9be0;
+    outline: none;
+    box-shadow: 0 0 8px rgba(75, 155, 224, 0.4);
+    background-color: #222;
+}
+
+/* Placeholder for Profile Picture */
+.profile-placeholder {
+    font-size: 18px;
+    color: #aaa;
+    padding: 15px;
+    background: linear-gradient(145deg, #2b2b2b, #333);
+    border-radius: 8px;
+    text-align: center;
+    width: 160px;
+    height: 160px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px dashed #555;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.profile-placeholder:hover {
+    transform: scale(1.05);
+    border-color: #4b9be0;
+    background: linear-gradient(145deg, #333, #222);
+}
+
+/* Profile Image Preview */
+.profile-preview {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 4px solid #444;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Buttons and Actions */
+.profile-actions {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/* Save Button */
+.save-btn {
+    background: linear-gradient(145deg, #4b9be0, #357ab7);
+    color: white;
+    border: none;
+    padding: 14px 35px;
+    font-size: 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.save-btn::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 300%;
+    height: 300%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0));
+    transition: transform 0.4s ease;
+    transform: translateX(0%);
+}
+
+.save-btn:hover {
+    background-color: #357ab7;
+    transform: translateY(-3px);
+}
+
+.save-btn:hover::after {
+    transform: translateX(20%);
+}
+
+/* Dark Mode Styles */
+.admin-profile-page.dark .admin-profile-container {
+    background-color: #1c1c1c;
+    background-image: linear-gradient(145deg, #2b2b2b, #1c1c1c);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.admin-profile-page.dark .profile-field input,
+.admin-profile-page.dark .profile-field select {
+    background-color: #333;
+    color: white;
+    border: 1px solid #444;
+}
+
+.admin-profile-page.dark .save-btn {
+    background: linear-gradient(145deg, #4b9be0, #357ab7);
+}
+
+.admin-profile-page.dark .save-btn:hover {
+    background-color: #3b8dcf;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .admin-profile-container {
+        padding: 20px;
+        max-width: 500px;
+    }
+
+    .profile-placeholder {
+        font-size: 14px;
+        width: 120px;
+        height: 120px;
+    }
+
+    .profile-preview {
+        width: 120px;
+        height: 120px;
+    }
+
+    .save-btn {
+        width: 100%;
+        font-size: 16px;
+        padding: 12px;
+    }
+}

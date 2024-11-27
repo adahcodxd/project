@@ -1,0 +1,146 @@
+/* Main container for About Page */
+.about-page {
+    font-family: "Roboto", sans-serif;
+    color: #ecf0f1; /* Light text for dark background */
+    background: linear-gradient(135deg, #2c3e50, #34495e); /* Dark blue gradient background */
+    padding: 80px 20px;
+    min-height: 100vh;
+    text-align: center;
+  }
+  
+  /* Header Section */
+  .about-header {
+    margin-bottom: 60px;
+    color: #ecf0f1;
+  }
+  
+  .about-header h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    text-shadow: 4px 4px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .about-header p {
+    font-size: 1.2rem;
+    color: #bdc3c7; /* Lighter gray for contrast */
+    line-height: 1.7;
+    max-width: 800px;
+    margin: 0 auto;
+    font-weight: 300;
+  }
+  
+  /* Mission Section */
+  .about-mission,
+  .about-vision,
+  .about-values {
+    background: rgba(0, 0, 0, 0.6); /* Dark overlay background for text contrast */
+    margin: 40px 0;
+    padding: 40px 20px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    color: #ecf0f1;
+    transition: background 0.3s ease;
+  }
+  
+  .about-mission h2,
+  .about-vision h2,
+  .about-values h2 {
+    font-size: 2.5rem;
+    color: #1abc9c; /* Bright turquoise for headings */
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
+  
+  .about-mission p,
+  .about-vision p {
+    font-size: 1.2rem;
+    color: #ecf0f1;
+    line-height: 1.7;
+    font-weight: 400;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  
+  /* Values Section */
+  .about-values ul {
+    list-style-type: none;
+    padding: 0;
+    font-size: 1.1rem;
+    color: #bdc3c7; /* Lighter gray for text contrast */
+  }
+  
+  .about-values li {
+    margin: 20px 0;
+    padding-left: 25px;
+    position: relative;
+  }
+  
+  .about-values li:before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #27ae60; /* Green for positive values */
+    font-size: 1.5rem;
+  }
+  
+  /* Card-style Sections - Hover Effect */
+  .about-mission:hover,
+  .about-vision:hover,
+  .about-values:hover {
+    background: rgba(0, 0, 0, 0.8); /* Darker background on hover */
+    transform: scale(1.05);
+  }
+  
+  .about-values li:nth-child(even) {
+    background-color: rgba(0, 0, 0, 0.4); /* Darker background for alternating list items */
+    border-radius: 8px;
+    padding: 12px 20px;
+    transition: background 0.3s ease;
+  }
+  
+  .about-values li:nth-child(even):hover {
+    background-color: rgba(0, 0, 0, 0.6); /* Darker effect on hover */
+    transform: translateY(-5px);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .about-header h1 {
+      font-size: 2.5rem;
+    }
+  
+    .about-header p {
+      font-size: 1rem;
+    }
+  
+    .about-mission,
+    .about-vision,
+    .about-values {
+      padding: 30px;
+    }
+  
+    .about-mission h2,
+    .about-vision h2,
+    .about-values h2 {
+      font-size: 2rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .about-header h1 {
+      font-size: 2rem;
+    }
+  
+    .about-header p {
+      font-size: 1rem;
+    }
+  
+    .about-values li {
+      font-size: 1rem;
+    }
+  }
+  

@@ -1,0 +1,222 @@
+/* General styles for the login container */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #212121, #1b1b1b); /* Dark gradient background */
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Login Form Styles */
+.login-card {
+    background: #333333;  /* Dark background for the form */
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.4);  /* Strong shadow for depth */
+    width: 100%;
+    max-width: 450px;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Header Styles (Authentication Portal Title) */
+.login-header h2 {
+    font-size: 32px;  /* Larger size for better visibility */
+    font-weight: 700;
+    color: #ff9800;  /* Vibrant orange to catch attention */
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);  /* Dark shadow for depth */
+}
+
+/* Subtext for the header */
+.login-header p {
+    font-size: 16px;
+    color: #b0bec5;  /* Lighter text for subheading */
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+/* Form Group Styles */
+.form-group {
+    margin-bottom: 25px;
+    text-align: left;
+}
+
+/* Label styles with better contrast */
+label {
+    font-size: 16px;
+    color: #ff5722;  /* Bright orange for labels to make them stand out */
+    margin-bottom: 8px;
+    display: block;
+    font-weight: 600;
+}
+
+/* Input Fields */
+input {
+    width: 100%;
+    padding: 14px 16px;
+    font-size: 15px;
+    border: 1px solid #444;  /* Darker border */
+    border-radius: 12px;
+    background-color: #444444;  /* Darker input background */
+    color: #ffffff;  /* White text */
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+input:focus {
+    border-color: #ff5722; /* Bright color for focus */
+    background-color: #555555;  /* Lighter background on focus */
+    box-shadow: 0 0 8px rgba(255, 87, 34, 0.6); /* Focus glow effect */
+    outline: none;
+}
+
+input::placeholder {
+    color: #b0bec5;  /* Light placeholder text */
+}
+
+/* Password Visibility Toggle */
+.password-wrapper {
+    position: relative;
+}
+
+.toggle-password {
+    position: absolute;
+    top: 50%;
+    right: 12px;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    font-size: 16px;
+    color: #ff5722;  /* Bright color for toggle */
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.toggle-password:hover {
+    color: #ff9800;  /* Hover effect */
+}
+
+/* Button Styles */
+.login-btn {
+    width: 100%;
+    padding: 16px 0;
+    background: linear-gradient(135deg, #ff5722, #ff9800); /* Gradient button for attention */
+    color: #ffffff;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 12px rgba(255, 87, 34, 0.4);
+}
+
+.login-btn:hover {
+    background: linear-gradient(135deg, #ff9800, #ff5722); /* Reverse gradient on hover */
+    transform: translateY(-3px);
+    box-shadow: 0px 8px 16px rgba(255, 87, 34, 0.6);
+}
+
+.login-btn:active {
+    transform: translateY(1px);
+    box-shadow: 0px 4px 8px rgba(255, 87, 34, 0.4);
+}
+
+/* Spinner (for loading states) */
+.spinner {
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-top: 3px solid #fff;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Signup Redirect */
+.signup-redirect p {
+    font-size: 14px;
+    color: #b0bec5; /* Lighter text */
+    margin-top: 20px;
+}
+
+.signup-redirect a {
+    color: #ff5722;  /* Bright color for link */
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.signup-redirect a:hover {
+    color: #ff9800;  /* Hover effect on link */
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .login-card {
+        padding: 30px;
+        max-width: 90%;
+    }
+
+    input {
+        padding: 12px;
+    }
+
+    .login-btn {
+        padding: 14px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .login-header h2 {
+        font-size: 24px;
+    }
+
+    .login-header p {
+        font-size: 14px;
+    }
+
+    input {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .login-btn {
+        font-size: 14px;
+        padding: 12px 0;
+    }
+
+    .signup-redirect p {
+        font-size: 13px;
+    }
+}

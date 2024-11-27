@@ -1,0 +1,38 @@
+/* General CSS for All JSX Files */
+
+/* Reset Default Margins and Padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Ensure Full Height and Prevent White Space */
+  html, body {
+    height: 100%;
+    background-color: #121418; /* Dark background color */
+ /* Text color */
+    font-family: 'Arial', sans-serif;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+  }
+  
+  /* Wrapper to Stretch Full Height */
+  #root, .app-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+  }
+  
+  /* Main Content Area */
+  .main-content {
+    flex: 1; /* Fills the remaining vertical space */
+  }
+  
+  /* Footer Stays at the Bottom */
+  .footer {
+    background-color: #222;
+    color: #010101;
+    text-align: center;
+    padding: 15px 0;
+  }
+  

@@ -1,0 +1,214 @@
+
+
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Navbar Styling */
+.admin-navbar {
+  display: flex;
+  justify-content: space-between; /* Space between logo and menu */
+  align-items: center; /* Center logo and menu vertically */
+  padding: 15px 30px; /* Add spacing */
+  background-color: #333; /* Dark background */
+  color: white; /* White text */
+  position: sticky; /* Sticks at top */
+  top: 0;
+  z-index: 1000; /* Ensure above other content */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Enhanced shadow */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+/* Admin Navbar General Styles */
+.admin-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #2b2b2b; /* Dark background for the navbar */
+  padding: 15px 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Navbar Button Styling */
+.admin-navbar button {
+  background-color: #4b9be0; /* Blue button background */
+  color: #ffffff; /* White text color */
+  border: none;
+  border-radius: 8px; /* Rounded corners for buttons */
+  padding: 12px 25px; /* Uniform padding for all buttons */
+  font-size: 16px; /* Same font size for all buttons */
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: inline-block;
+  text-align: center;
+}
+
+/* Button Hover Effect */
+.admin-navbar button:hover {
+  background-color: #357ab7; /* Darker blue on hover */
+  transform: translateY(-3px); /* Slight lift effect */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+
+/* Button Active State */
+.admin-navbar button:active {
+  background-color: #2a5d86; /* Even darker blue when clicked */
+  transform: translateY(1px); /* Button presses down slightly */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Reduced shadow when clicked */
+}
+
+/* Button Disabled State */
+.admin-navbar button:disabled {
+  background-color: #a7c9e9; /* Light blue when disabled */
+  color: #7f9bb0; /* Light grayish text */
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* Navbar Responsive Button Styling */
+@media (max-width: 768px) {
+  .admin-navbar {
+      flex-direction: column;
+      gap: 10px; /* Add some space between navbar items on small screens */
+      align-items: flex-start;
+  }
+
+  /* Adjust button size for mobile */
+  .admin-navbar button {
+      padding: 10px 20px;
+      font-size: 14px;
+      width: 100%; /* Make buttons take full width on mobile */
+  }
+}
+
+/* Logo Styling */
+.admin-navbar .logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.admin-navbar .logo:hover {
+  color: #4caf50; /* Highlight color for logo */
+  transform: scale(1.1); /* Slight zoom effect */
+}
+
+/* Menu Styling */
+.admin-navbar .menu {
+  display: flex; /* Horizontal layout */
+  gap: 20px; /* Spacing between menu items */
+  list-style: none; /* Remove default list styling */
+  margin: 0;
+  padding: 0;
+}
+
+/* Reusable Button Styling */
+.btn {
+  font-size: 1rem;
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px; /* Consistent padding */
+  border-radius: 5px; /* Rounded edges */
+  background-color: #4caf50; /* Green background */
+  font-weight: bold;
+  cursor: pointer; /* Show pointer cursor on hover */
+  border: none; /* No border for buttons */
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 45px; /* Fixed height for consistency */
+  min-width: 120px; /* Ensures consistent width */
+  text-align: center; /* Center text in buttons */
+}
+
+.btn:hover {
+  background-color: #388e3c; /* Darker green on hover */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Shadow on hover */
+  transform: translateY(-3px); /* Slight lift effect */
+}
+
+.btn:active {
+  background-color: #2e7d32; /* Even darker green for active state */
+  transform: translateY(1px); /* Slight press effect */
+}
+
+/* Apply Button Class to Specific Elements */
+.menu-item {
+  /* Use the reusable button styles */
+  composes: btn;
+}
+
+.logout-btn {
+  /* Use the reusable button styles */
+  composes: btn;
+}
+
+/* Dropdown Menu (Optional) */
+.dropdown {
+  position: relative; /* For dropdown positioning */
+}
+
+.dropdown-menu {
+  display: none; /* Initially hidden */
+  position: absolute;
+  top: 100%; /* Below the parent menu item */
+  left: 0;
+  background-color: #444; /* Dropdown background */
+  padding: 10px 0; /* Spacing for dropdown items */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Dropdown shadow */
+  border-radius: 5px;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px); /* Dropdown slides down */
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block; /* Show dropdown on hover */
+  opacity: 1; /* Fade in */
+  visibility: visible; /* Ensure it is visible */
+  transform: translateY(0); /* Slide into place */
+}
+
+.dropdown-menu .menu-item {
+  background-color: transparent; /* Transparent for dropdown items */
+  padding: 10px 20px;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown-menu .menu-item:hover {
+  background-color: #4caf50; /* Green hover effect for dropdown */
+  color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .admin-navbar {
+    flex-direction: column; /* Stack logo and menu */
+    align-items: flex-start;
+    padding: 15px;
+  }
+
+  .menu {
+    flex-direction: column; /* Stack menu items vertically */
+    width: 100%; /* Full width */
+    gap: 10px; /* Space out vertically */
+  }
+
+  .menu-item {
+    width: 100%; /* Stretch menu items */
+    text-align: left;
+  }
+
+  .logout-btn {
+    width: 100%; /* Stretch logout button in mobile */
+  }
+}
