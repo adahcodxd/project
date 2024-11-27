@@ -170,3 +170,4 @@ The RBAC system offers a robust and flexible solution to manage user access and 
 
 I hope this README provides a clear, comprehensive, and detailed explanation of the RBAC system you've developed. It covers the project, the features, how it works, and its key components in an easily understandable manner. You can copy and paste this directly into your GitHub repository!
 
+![React Logo](https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg)
