@@ -113,7 +113,22 @@ input::placeholder {
 .password-wrapper {
     position: relative;
 }
-
+.info-box {
+    background-color: #0d0d0d; /* Bright Yellow */
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 16px;
+    color: #333; /* Dark text for readability */
+    border: 1px solid #fbc02d; /* Darker yellow border for contrast */
+    font-weight: bold;
+  }
+  
+  .info-box strong {
+    color: #d32f2f; /* Red color for the passwords to make them stand out */
+  }
+  
 .toggle-password {
     position: absolute;
     top: 50%;
@@ -180,7 +195,7 @@ input::placeholder {
 /* Signup Redirect */
 .signup-redirect p {
     font-size: 14px;
-    color: #b0bec5; /* Lighter text */
+    color: #000102; /* Lighter text */
     margin-top: 20px;
 }
 
